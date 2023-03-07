@@ -5,11 +5,16 @@ from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters, status, viewsets
 from rest_framework.decorators import action, api_view
-from rest_framework.response import Response
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
+from reviews.models import Review
+from titles.models import Category, Genre, Title
+from users.models import CustomUser
 
+from .filter import TitlesFilter
+from .mixins import CategoryGenreMixin
 from .permissions import (IsAdminOrReadOnly,
                           IsAdminModeratorOwnerOrReadOnly,
                           IsAdminOrSuperuser)
@@ -19,12 +24,7 @@ from .serializers import (CategorySerializer, CommentSerializer,
                           TitleWriteSerializer,
                           UserSerializer, SingUpSerializer,
                           MeSerializer, TokenSerializer)
-from .filter import TitlesFilter
-from .mixins import CategoryGenreMixin
 from .utils import sent_verification_code
-from reviews.models import Review
-from titles.models import Category, Genre, Title
-from users.models import CustomUser
 
 
 class CategoryViewSet(CategoryGenreMixin):
