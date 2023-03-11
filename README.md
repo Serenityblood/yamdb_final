@@ -28,7 +28,13 @@ git clone git@github.com:Serenityblood/yamdb_final.git
 Для корректной работы проекта потребутеся создать и заполнить файл .env
 cd yamdb_final/infra
 touch .env
-
+DB_ENGINE=django.db.backends.postgresql
+DB_NAME=postgres
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+DB_HOST=db
+DB_PORT=5432
+```
 
 ### 3.
 ```
@@ -56,16 +62,17 @@ django-filter==21.1
 
 
 ## Авторы проекта:
+```
 > Serenity(Users/Auth), Lolozius(Serializers/Views), Nail(Models)
-
-[![Django-app workflow](https://github.com/Serenityblood/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?branch=master)](https://github.com/Serenityblood/yamdb_final/actions/workflows/yamdb_workflow.yml))
+```
 
 ## IP проекта:
 ```
-http://51.250.20.220/
+http://158.160.24.255/
 ```
 
 ## Документация:
 ```
-http://51.250.20.220/redoc
+http://158.160.24.255/redoc
 ```
+[![Django-app workflow](https://github.com/Serenityblood/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)](https://github.com/Serenityblood/yamdb_final/actions/workflows/yamdb_workflow.yml)
