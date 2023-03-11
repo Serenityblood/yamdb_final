@@ -25,7 +25,13 @@ git clone git@github.com:Serenityblood/yamdb_final.git
 
 ### 3.
 ```
+Для корректной работы проекта потребутеся создать и заполнить файл .env
 cd yamdb_final/infra
+touch .env
+
+
+### 3.
+```
 docker-compose up -d
 ```
 
@@ -52,10 +58,7 @@ django-filter==21.1
 ## Авторы проекта:
 > Serenity(Users/Auth), Lolozius(Serializers/Views), Nail(Models)
 
-![Yamdb_tests](https://github.com/serenityblood/yamdb_final/workflows/tests/badge.svg)
-![Yamdb_build_and_push_to_docker_hub](https://github.com/serenityblood/yamdb_final/workflows/build_and_push_to_docker_hub/badge.svg)
-![Yamdb_deploy](https://github.com/serenityblood/yamdb_final/workflows/deploy/badge.svg)
-![Yamdb_tests](https://github.com/serenityblood/yamdb_final/workflows/send_message/badge.svg)
+[![Django-app workflow](https://github.com/Serenityblood/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?branch=master)](https://github.com/Serenityblood/yamdb_final/actions/workflows/yamdb_workflow.yml))
 
 ## IP проекта:
 ```
